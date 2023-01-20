@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- main style -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/solid.css">
+
+    <title>Log In Screen</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post">
+                <input type="email" name="email" id="email" required placeholder="Email">
+                <div class="field">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <i class="fa-solid fa-eye" id="show-password" onclick="show()"></i>
+                </div>
+                    <button type="submit">Log In</button>
+        </form>
+    </div>
+
+
+
+    <script>
+        let state = false
+
+        function show() {
+            if(state){
+                document.getElementById('password').setAttribute('type', 'password');
+                state = false;
+            }
+            else {
+                document.getElementById('password').setAttribute('type', 'text');
+                state = true;
+            }
+        }
+    </script>
+</body>
+</html>
